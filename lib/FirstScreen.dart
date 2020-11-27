@@ -2,6 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app22/SecondScreen.dart';
+import 'package:flutter_app22/main.dart';
 
 class FirstScreen extends StatelessWidget {
   @override
@@ -75,66 +77,76 @@ class FirstScreen extends StatelessWidget {
                             )
                           ],
                         ),
-                        Container(
+                        GestureDetector(
+                            onTap:(){
+                              Navigator.push(context,
+                              MaterialPageRoute(builder:(context)=>
+                              SecondScreen()
+                              )
+                              );
+                            }
+                            ,
+                          child: Container(
 
-                          child: Row(
-                              children: [
-                                Container(
-                                  margin: EdgeInsets.only(
-                                      top: 30,
-                                      left: 20
+                            child: Row(
+                                children: [
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        top: 30,
+                                        left: 20
+                                    ),
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(10)),
+                                        image: DecorationImage(
+                                            image: AssetImage(
+                                                "assets/images/jobs2.jpg")
+                                        )
+                                    ),
+                                    width: 100,
+                                    height: 100,
                                   ),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.all(
-                                          Radius.circular(10)),
-                                      image: DecorationImage(
-                                          image: AssetImage(
-                                              "assets/images/jobs2.jpg")
-                                      )
-                                  ),
-                                  width: 100,
-                                  height: 100,
-                                ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Container(
-                                      margin: EdgeInsets.only(
-                                          top: 30,
-                                          left: 15
-                                      ),
-                                      child: Text(
-                                        "Steve Jobs",
-                                        style: TextStyle(
+                                  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        margin: EdgeInsets.only(
+                                            top: 30,
+                                            left: 15
+                                        ),
+                                        child: Text(
+                                          "Steve Jobs",
+                                          style: TextStyle(
 
-                                            fontSize: 32,
-                                            fontWeight: FontWeight.w300,
-                                            color: Color(0xFFb1b9c5)
+                                              fontSize: 32,
+                                              fontWeight: FontWeight.w300,
+                                              color: Color(0xFFb1b9c5)
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      width: 250,
+                                      Container(
+                                        width: 250,
 
-                                      margin: EdgeInsets.only(
-                                          top: 2,
-                                          left: 15
-                                      ),
-                                      child: Text(
-                                        "Jobs is regarded as a symbol of the computer industry and entertainmet industry",
-                                        style: TextStyle(
-                                            fontSize: 13,
-                                            fontWeight: FontWeight.w300,
-                                            color: Color(0xFFb1b9c5)
+                                        margin: EdgeInsets.only(
+                                            top: 2,
+                                            left: 15
+                                        ),
+                                        child: Text(
+                                          "Jobs is regarded as a symbol of the computer industry and entertainmet industry",
+                                          style: TextStyle(
+                                              fontSize: 13,
+                                              fontWeight: FontWeight.w300,
+                                              color: Color(0xFFb1b9c5)
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                  ],
-                                )
+                                    ],
+                                  )
 
 
-                              ]
+                                ]
 
+                            ),
                           ),
                         ),
                         SizedBox(height: 30),
